@@ -1,10 +1,50 @@
-body {
-  background-color: blue;
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700');
+
+
+*{
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-div{
-  background-color: #c0ffee;
-  padding:30px;
-  margin:300px;
-  text-align: center;
+body {
+  background: #3A1C71;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: 'Noto Sans', sans-serif;
 }
+
+.wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:0 20vw;
+  height:100vh;
+
+  .content {
+    background-color: #fff;
+    text-align: center;
+    text-align: left;
+    padding: 5vw;
+
+    h1{
+      font-size: 2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 5vh;
+      }
+      h1::after{
+        content: "t";
+        background-color: #000;
+        height:50px;
+        width:10vw;
+      }
+
+      span{
+          font-weight: 400;
+        }
+    }
+  }
