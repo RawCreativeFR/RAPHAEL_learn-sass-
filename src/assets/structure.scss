@@ -50,9 +50,7 @@ body {
 }
 
 .wrapper{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex_center();
   margin:0 15vw;
 height: 100vh;
 
