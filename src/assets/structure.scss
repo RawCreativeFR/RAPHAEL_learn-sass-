@@ -10,37 +10,68 @@
 }
 
 body {
-  background: #3A1C71;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   font-family: 'Noto Sans', sans-serif;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
 }
 
 .wrapper{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin:0 20vw;
-  height:100vh;
+  margin:0 15vw;
+height: 100vh;
 
   .content {
-    background-color: #fff;
-    text-align: center;
-    text-align: left;
-    padding: 5vw;
+    background: linear-gradient(to right, #054f7d, #00a7cf, #efe348, #861a54) 0 0;
+background-size: 400%;
+background-clip: text;
+-webkit-background-clip: text;
+animation-name: gradient;
+animation-duration: 10s;
+animation-iteration-count: infinite;
+text-align: center;
 
     h1{
-      font-size: 2rem;
+      font-size: 6rem;
       font-weight: 700;
+      color: transparent;
       text-transform: uppercase;
-      margin-bottom: 5vh;
-      }
-      h1::after{
-        content: "t";
-        background-color: #000;
-        height:50px;
-        width:10vw;
+      margin-bottom: 3vh;
       }
 
       span{
@@ -48,3 +79,289 @@ background: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71); /* W3C, IE 10+
         }
     }
   }
+
+  @keyframes gradient {
+    0% {background-position: 0 0;}
+    15% {background-position: 30% 0;}
+    25% {background-position: 70% 0;}
+    50% {background-position: 100% 0;}
+    60% {background-position: 70% 0;}
+    75% {background-position: 30% 0;}
+    100% {background-position: 0 0;}
+  }
+
+
+  #test-title {
+            animation: fadein 2s;
+}
+
+@-webkit-keyframes fadein {
+	0%{opacity: 0;-webkit-transform: translateY(60px);}
+    70%  {opacity: 1;-webkit-transform: translateY(0px);}
+}
+#test-text {
+            animation: fadeOut 2s;
+}
+
+@-webkit-keyframes fadeOut {
+	0%{opacity: 0;-webkit-transform: translateY(-30px);}
+	70%  {opacity: 1;-webkit-transform: translateY(0px);}
+}
+
+.ants {
+  fill: black;
+  width: 15px;
+  height: 25px;
+  position: absolute;
+}
+
+#ant1 {
+  left: 50%;
+  bottom: -60%;
+  animation: ant-1-animation 8s infinite;
+}
+
+#ant2 {
+  left: 0;
+  bottom: -50%;
+  animation: ant-2-animation 9s infinite;
+}
+
+#ant3 {
+  left: 100%;
+  bottom: -70%;
+  animation: ant-3-animation 12s infinite;
+  animation-delay: 1s;
+}
+
+#ant4 {
+  left: 0;
+  bottom: -50%;
+  animation: ant-2-animation 12s infinite;
+  animation-delay: 3s;
+}
+
+// ANT-IMATIONS
+@keyframes ant-1-animation {
+  0% {
+    left: 50%;
+    bottom: -60%;
+  }
+  10% {
+    left: 50%;
+    bottom: 5%;
+    transform: rotate(0deg);
+  }
+  12% {
+    left: 50%;
+    bottom: 5%;
+    transform: rotate(-90deg);
+  }
+  18% {
+    transform: rotate(-90deg);
+  }
+  20% {
+    left: 5%;
+    bottom: 5%;
+    transform: rotate(-90deg);
+  }
+  22% {
+    transform: rotate(0);
+  }
+  32% {
+    transform: rotate(0);
+  }
+  38% {
+    left: 5%;
+    bottom: 87%;
+    transform: rotate(90deg);
+  }
+  50% {
+    left: 90%;
+    bottom: 87%;
+    transform: rotate(90deg);
+  }
+  55% {
+    left: 90%;
+    bottom: 87%;
+    transform: rotate(230deg);
+  }
+  72% {
+    left: 5%;
+    bottom: 5%;
+    transform: rotate(230deg);
+  }
+  78% {
+    left: 5%;
+    bottom: 5%;
+    transform: rotate(90deg);
+  }
+  85% {
+    left: 50%;
+    bottom: 5%;
+    transform: rotate(90deg);
+  }
+  90% {
+    left: 50%;
+    bottom: 5%;
+    transform: rotate(180deg);
+  }
+  100% {
+    left: 50%;
+    bottom: -60%;
+    transform: rotate(180deg);
+  }
+}
+
+// ANT 2
+@keyframes ant-2-animation {
+  0% {
+    left: 0;
+    bottom: -50%;
+    transform: rotate(45deg);
+  }
+  15% {
+    left: 50%;
+    bottom: 5%;
+    transform: rotate(45deg);
+  }
+  18% {
+    left: 50%;
+    bottom: 5%;
+    transform: rotate(90deg);
+  }
+  28% {
+    left: 85%;
+    bottom: 5%;
+    transform: rotate(90deg);
+  }
+  30% {
+    left: 85%;
+    bottom: 5%;
+    transform: rotate(0deg);
+  }
+  40% {
+    left: 85%;
+    bottom: 85%;
+    transform: rotate(0deg);
+  }
+  48% {
+    left: 85%;
+    bottom: 85%;
+    transform: rotate(-90deg);
+  }
+  58% {
+    left: 5%;
+    bottom: 85%;
+    transform: rotate(-90deg);
+  }
+  68% {
+    left: 5%;
+    bottom: 85%;
+    transform: rotate(-180deg);
+  }
+  79% {
+    left: 5%;
+    bottom: 5%;
+    transform: rotate(-180deg);
+  }
+  81% {
+    left: 5%;
+    bottom: 5%;
+    transform: rotate(-270deg);
+  }
+  88% {
+    left: 50%;
+    bottom: 5%;
+    transform: rotate(-270deg);
+  }
+  90% {
+    left: 50%;
+    bottom: 5%;
+    transform: rotate(-140deg);
+  }
+  100% {
+    left: 0%;
+    bottom: -50%;
+    transform: rotate(-140deg);
+  }
+}
+
+// ANT 3
+@keyframes ant-3-animation {
+  0% {
+    left: 100%;
+    bottom: -70%;
+    transform: rotate(-45deg);
+  }
+  15% {
+    left: 50%;
+    bottom: -15%;
+    transform: rotate(-45deg);
+  }
+  18% {
+    left: 50%;
+    bottom: -15%;
+    transform: rotate(-90deg);
+  }
+  28% {
+    left: -10%;
+    bottom: -15%;
+    transform: rotate(-90deg);
+  }
+  30% {
+    left: -10%;
+    bottom: -15%;
+    transform: rotate(0deg);
+  }
+  45% {
+    left: -10%;
+    bottom: 105%;
+    transform: rotate(0deg);
+  }
+  48% {
+    left: -10%;
+    bottom: 105%;
+    transform: rotate(90deg);
+  }
+  58% {
+    left: 105%;
+    bottom: 105%;
+    transform: rotate(90deg);
+  }
+  60% {
+    left: 105%;
+    bottom: 105%;
+    transform: rotate(180deg);
+  }
+  75% {
+    left: 105%;
+    bottom: -15%;
+    transform: rotate(180deg);
+  }
+  81% {
+    left: 105%;
+    bottom: -15%;
+    transform: rotate(270deg);
+  }
+  88% {
+    left: 50%;
+    bottom: -15%;
+    transform: rotate(270deg);
+  }
+  90% {
+    left: 50%;
+    bottom: -15%;
+    transform: rotate(180deg);
+  }
+  92% {
+    left: 50%;
+    bottom: -15%;
+    transform: rotate(130deg);
+  }
+  100% {
+    left: 100%;
+    bottom: -70%;
+    transform: rotate(130deg);
+  }
+}
