@@ -21,9 +21,6 @@ __il suffit de faire ceci la première fois, il n'y a pas besoin de le refaire l
 ```bash
 npm run serve
 ```
-dans cd Documents/Aries/Github/learn-sass
-
-
 Cela va lancer un serveur de développement sur votre machine. Vous devriez voir quelque chose de similaire
 
 ![Image](doc/done.png)
@@ -32,6 +29,6 @@ Vous pouvez maintenant lancer l'url `http://localhost:8080` (ou similaire) et vo
 
 ## Modifier le code
 Une fois que le serveur est lancé, vous pouvez modifier le contenu du fichier public/index.html
-ou src/assets/app.scss et la page se rechargera toute seule.
+ou src/assets/app.scss et la page se rechargera toute seule. 
 
 Si cela ne marche pas rafraîchissez la page dans le navigateur ou relancez entièrement le serveur.
